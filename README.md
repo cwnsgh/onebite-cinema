@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 한입챌린지: NEXT.JS
 
-## Getting Started
+## 🚀 강의: 한 입 크기로 잘라먹는 Next.js
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📅 진행 상황
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔍 섹션 0 & 1: 들어가며 & Next.js 소개
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#### Day 1 (3/24) - [과제 링크](https://cafe.naver.com/winterlood/2888 "한입챌린지 Day 1 과제")
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **📚 강의 소개**
+- **🌟 Next.js 소개**
+- **🧠 Next.js 사전렌더링 이해**
+- **🛠️ 실습용 백엔드 서버 세팅**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 🔍 섹션 2: Page Router 핵심정리
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Day 2 (3/25) - [과제 링크](https://cafe.naver.com/winterlood/3021 "한입챌린지 Day 2 과제")
 
-## Learn More
+- **📘 Page Router 소개**
+- **🗺️ 페이지 라우팅 설정**
 
-To learn more about Next.js, take a look at the following resources:
+#### Day 3 (3/26) - [과제 링크](https://cafe.naver.com/winterlood/3058 "한입챌린지 Day 3 과제")
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **🧭 네비게이팅**
+- **🚀 프리페칭**
+- **🔌 API Routes**
+- **🎨 스타일링**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Day 4 (3/27) - [과제 링크](https://cafe.naver.com/winterlood/3176 "한입챌린지 Day 4 과제")
 
-## Deploy on Vercel
+- **🌐 글로벌 레이아웃 설정**
+- **📄 페이지별 레이아웃 설정**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Happy Coding! 🚀**
