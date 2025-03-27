@@ -1,3 +1,5 @@
+import SearchableLayout from "@/components/searchable-layout";
+import { ReactNode } from "react";
 export default function Home() {
   const String = "ONEBITE CINEMA";
 
@@ -7,3 +9,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = (page: ReactNode) => {
+  return <SearchableLayout>{page}</SearchableLayout>;
+};
