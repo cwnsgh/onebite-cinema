@@ -5,23 +5,33 @@ import { MovieData } from "@/types";
 import movies from "@/mock/movies.json";
 import MovieItem from "@/components/movie-item";
 import style from "./index.module.css";
+import {
+  GetServerSidePropsContext,
+  InferGetServerSidePropsType,
+  InferGetStaticPropsType,
+} from "next";
+import fetchMovies from "@/lib/fetch-movies";
 
-export default function Page() {
-  const router = useRouter();
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const q = context.query.q;
+  const movies = await fetchMovies(q as string);
 
-  const { q } = router.query;
-
-  const filteredMovies = q
-    ? movies.filter((movie: MovieData) =>
-        movie.title.toLowerCase().includes((q as string).toLowerCase())
-      )
-    : movies;
-
+  return {
+    props: {
+      movies,
+    },
+  };
+};
+export default function Page({
+  movies,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <section>
       <div className={style.search_movies}>
-        {filteredMovies.length > 0 ? (
-          filteredMovies.map((movie) => <MovieItem key={movie.id} {...movie} />)
+        {movies.length > 0 ? (
+          movies.map((movie) => <MovieItem key={movie.id} {...movie} />)
         ) : (
           <p>검색 결과가 없습니다.</p>
         )}
