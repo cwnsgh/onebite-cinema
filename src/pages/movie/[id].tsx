@@ -3,13 +3,27 @@ import style from "./[id].module.css";
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
+  GetStaticPropsContext,
   InferGetServerSidePropsType,
+  InferGetStaticPropsType,
 } from "next";
 import fetchOneMovie from "@/lib/fetch-one-movie";
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
+export const getStaticPaths = () => {
+  return {
+    paths: [
+      //파라미터값은 무조건 문자열로설정 그래야 next가 이해함
+      { params: { id: "1" } },
+      { params: { id: "2" } },
+      { params: { id: "3" } },
+    ],
+    //풀백해줘야함 - 대체 , 대비책, 보험
+    fallback: false,
+    //false로 하면 존재하지않는 경로의 요청은 그냥 NOTFOUND
+  };
+};
+
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   const id = context.params!.id;
   const movie = await fetchOneMovie(Number(id));
   return {
@@ -19,21 +33,10 @@ export const getServerSideProps = async (
 
 export default function Page({
   movie,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   if (!movie) {
     return <h2>해당 영화 정보를 찾을 수 없습니다.</h2>;
   }
-  const {
-    id,
-    title,
-    subTitle,
-    description,
-    releaseDate,
-    company,
-    genres,
-    runtime,
-    posterImgUrl,
-  } = movie;
 
   return (
     <div>

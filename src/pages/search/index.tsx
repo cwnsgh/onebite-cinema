@@ -2,7 +2,6 @@ import SearchableLayout from "@/components/searchable-layout";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { MovieData } from "@/types";
-import movies from "@/mock/movies.json";
 import MovieItem from "@/components/movie-item";
 import style from "./index.module.css";
 import {
